@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Blog.Models.User>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        string imagePath = "default-avatar.png";
+        if (!string.IsNullOrWhiteSpace(item.Avatar))
+        {
+            imagePath = item.Avatar;
+        }
+        <div class="list-group-item col-md-8 mx-auto">
+            <img src="~/images/@imagePath"
+                 class="rounded-circle"
+                 height="120" width="120"
+                 asp-append-version="true" />
+            <a style="text-decoration: none;" class="display-4" href="/User/Profile/@item.Username" > @item.Username</a>
+        </div>
+      }
+</div>

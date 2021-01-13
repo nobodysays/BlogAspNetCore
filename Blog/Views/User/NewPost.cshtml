@@ -1,0 +1,16 @@
+﻿@model Blog.Models.Post
+
+<div class="container text-center">
+
+    <form asp-action="NewPost" class="w-100" asp-controller="User" method="post">
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" asp-for="Title" class="form-control" id="exampleFormControlInput1" placeholder="Title">
+        </div>
+        <div class="row mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Text</label>
+            <textarea asp-for="Text" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Text"></textarea>
+        </div>
+        <input class="row btn btn-primary" type="submit" value="Submit">
+    </form>
+</div>

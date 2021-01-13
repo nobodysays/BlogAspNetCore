@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  blog:
+    image: ${DOCKER_REGISTRY-}blog
+    build:
+      context: .
+      dockerfile: Blog/Dockerfile
